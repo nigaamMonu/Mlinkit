@@ -126,15 +126,15 @@ const Navbar = () => {
         <div
           className={`${
             open ? "flex" : "hidden"
-          } absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}
+          } absolute top-[60px] left-0 w-full bg-white/90 backdrop-blur-md shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden z-50 border-t border-gray-300 transition-all duration-300 ease-in-out`}
         >
-          <NavLink to="/" onClick={() => setOpen(false)} className="block">
+          <NavLink to="/" onClick={() => setOpen(false)} className="cursor-pointer w-full text-center px-6 py-2 mt-2  hover:bg-blue-100 text-primary rounded-md transition text-sm">
             Home
           </NavLink>
           <NavLink
             to="/products"
             onClick={() => setOpen(false)}
-            className="block"
+            className="cursor-pointer w-full text-center px-6 py-2 mt-2 hover:bg-blue-100 text-primary rounded-md transition text-sm"
           >
             All Products
           </NavLink>
@@ -142,19 +142,19 @@ const Navbar = () => {
             <NavLink
               to="/my-orders"
               onClick={() => setOpen(false)}
-              className="block"
+              className="cursor-pointer w-full text-center px-6 py-2 mt-2  hover:bg-blue-100 text-primary rounded-md transition text-sm"
             >
               My order
             </NavLink>
           )}
-          <NavLink to="/" onClick={() => setOpen(false)} className="block">
+          <NavLink to="/" onClick={() => setOpen(false)} className="cursor-pointer w-full text-center px-6 py-2 mt-2  hover:bg-blue-100 text-primary rounded-md transition text-sm">
             Contact
           </NavLink>
 
           {!user ? (
             <button
               onClick={() => setShowUserLogin(true)}
-              className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm"
+              className="cursor-pointer w-full text-center px-6 py-2 mt-2  hover:bg-blue-100 text-primary rounded-md transition text-sm"
             >
               Login
             </button>

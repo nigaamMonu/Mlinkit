@@ -1,0 +1,43 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+
+# Vite cache
+.vite/
+
+# Local environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs/
+*.log
+
+# Optional OS/system files
+.DS_Store
+Thumbs.db
+
+# Editor config folders
+.vscode/
+.idea/
+
+# TypeScript build info (if using TypeScript)
+*.tsbuildinfo
+
+# Stripe CLI config (if applicable)
+.stripe/
+
+# Custom folders (uncomment if needed)
+# public/uploads/
+# dump/             # MongoDB dump
+# tmp/              # Temp files
+# coverage/         # Test coverage

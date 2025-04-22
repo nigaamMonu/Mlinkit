@@ -20,7 +20,7 @@ import { stripeWebhooks } from './controllers/OrderController.js';
 const app=express();
 const PORT=process.env.PORT || 4000;
 // allow multiple origins
-const allowedOrigins=['http://localhost:5173','https://mlinkit-backend.vercel.app'];
+const allowedOrigins=['http://localhost:5173','https://mlinkit.vercel.app'];
 
 await connectDB();
 await connectCloudinary();

@@ -48,10 +48,13 @@ const Navbar = () => {
       </NavLink>
 
       {/* Desktop Menu */}
+        <NavLink to="/seller" className="text-gray-500 hover:text-primary text-xs sm:text-sm md:text-base ">
+            Seller Dashboard
+        </NavLink>
       <div className="hidden sm:flex items-center gap-8">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/products">All Products</NavLink>
-        <NavLink to="/">Contact</NavLink>
+        {/* <NavLink to="/">Contact</NavLink> */}
 
         <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
           <input
@@ -153,7 +156,9 @@ const Navbar = () => {
 
           {!user ? (
             <button
-              onClick={() => setShowUserLogin(true)}
+              onClick={() =>{ setShowUserLogin(true);
+                setOpen(false);
+              }}
               className="cursor-pointer w-full text-center px-6 py-2 mt-2  hover:bg-blue-100 text-primary rounded-md transition text-sm"
             >
               Login
@@ -162,9 +167,9 @@ const Navbar = () => {
             <button
               onClick={() => {
                 setOpen(false);
-                setShowUserLogin(true);
+                logout();
               }}
-              className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm"
+              className="cursor-pointer w-full text-center px-6 py-2 mt-2  hover:bg-blue-100 text-primary rounded-md transition text-sm"
             >
               Logout
             </button>
